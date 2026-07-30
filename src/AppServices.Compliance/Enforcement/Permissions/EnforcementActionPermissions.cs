@@ -12,7 +12,10 @@ public static class EnforcementActionPermissions
     {
         public bool CanAddResponse() =>
             item is { IsIssued: true, IsDeleted: false }
-                and ResponseRequestedViewDto { IsResponseReceived: false };
+                and ResponseViewDto { IsResponseReceived: false };
+
+        public bool CanEditResponse() =>
+            item is { IsIssued: true, IsDeleted: false } and ResponseViewDto;
 
         public bool CanBeAppealed() =>
             item is { IsIssued: true, IsDeleted: false }

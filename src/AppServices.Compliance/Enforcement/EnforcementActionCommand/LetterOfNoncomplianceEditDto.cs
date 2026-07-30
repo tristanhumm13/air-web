@@ -1,5 +1,4 @@
 ﻿using AirWeb.AppServices.Core.Utilities;
-using FluentValidation;
 using GaEpd.AppLibrary.DataAttributes;
 
 namespace AirWeb.AppServices.Compliance.Enforcement.EnforcementActionCommand;
@@ -15,12 +14,9 @@ public record LetterOfNoncomplianceEditDto : EnforcementActionEditDto
 
 public class LetterOfNoncomplianceEditValidator : AbstractValidator<LetterOfNoncomplianceEditDto>
 {
-    public LetterOfNoncomplianceEditValidator()
+    public LetterOfNoncomplianceEditValidator(IValidator<EnforcementActionEditDto> eaValidator)
     {
-        RuleFor(dto => dto.IssueDate)
-            .Must(date => date <= DateOnly.FromDateTime(DateTime.Today))
-            .When(dto => dto.IssueDate.HasValue)
-            .WithMessage("The issued date cannot be in the future.");
+        RuleFor(dto => dto).SetValidator(eaValidator);
 
         RuleFor(dto => dto.IssueDate)
             .NotNull()
