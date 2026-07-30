@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026.7.30] - 2026-07-30
+
+- Enable adding an initial Enforcement Action when starting a new Case File.
+- Enable editing enforcement action responses.
+
 ## [2026.7.22] - 2026-07-22
 
 - Updated some back-end code.
@@ -192,3 +197,4 @@
 [2026.7.9]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.9
 [2026.7.17]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.17
 [2026.7.22]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.22
+[2026.7.30]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.30
