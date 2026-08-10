@@ -1,5 +1,11 @@
 # Changelog
 
+## [2026.8.10] - 2026-08-10
+
+- Fix a bug preventing new notifications and permit revocations from being added.
+- Fix the edit pages so that if the original responsible staff is no longer active (or no longer has the correct roles),
+  the item can still be edited without needing to change the responsible staff.
+
 ## [2026.8.6] - 2026-08-06
 
 - Enable creating linked compliance work directly from enforcement.
@@ -205,3 +211,4 @@
 [2026.7.22]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.22
 [2026.7.30]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.30
 [2026.8.6]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.6
+[2026.8.10]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.10
