@@ -88,7 +88,7 @@
                 {
                     <a asp-page="Edit" asp-route-id="@Model.Id.ToString()" class="btn btn-outline-primary">Edit</a>
                 }
-                @if (Model.UserCan[CaseFileOperation.CloseCaseFile])
+                @if (Model.UserCan[CaseFileOperation.CloseCaseFile] && !caseFile.AttentionNeeded)
                 {
                     <a asp-page="Close" asp-route-id="@Model.Id.ToString()" class="btn btn-outline-primary">Close</a>
                 }
@@ -107,11 +107,11 @@
     <partial name="Shared/_TableOfContentsPartial" />
 
     <div class="col-12 col-md-9">
-        @if (caseFile.AttentionNeeded && Model.UserCan[CaseFileOperation.EditCaseFile])
+        @if (caseFile.AttentionNeeded && User.CouldEditCaseFile(caseFile))
         {
             <div class="callout callout-warning p-3">
                 <p><strong>Attention needed:</strong>
-                    This enforcement case requires
+                    This enforcement case @(caseFile.IsClosed ? "required" : "requires")
                     @if (caseFile.LacksLinkedCompliance)
                     {
                         @:a linked <a href="#discovery-events">discovery event</a>
@@ -1048,7 +1048,7 @@
             <div class="container">
                 <details>
                     <summary class="rounded-1 p-1"><span class="ps-1">Show EPA data exchange info</span></summary>
-                    <div class="ps-1">
+                    <div class="ps-1" id="data-exchange">
                         <h5 class="h6 mt-2">Case File</h5>
                         <dl class="row mt-2 mb-0 ms-1">
                             <dt class="col-sm-4">Is this a reportable Case File?</dt>
