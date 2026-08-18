@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026.8.18] - 2026-08-18
+
+- Made some UI changes to discourage closing a Case File if it still lacks required data (linked discovery event,
+  pollutants, etc.).
+
 ## [2026.8.10] - 2026-08-10
 
 - Fix a bug preventing new notifications and permit revocations from being added.
@@ -212,3 +217,4 @@
 [2026.7.30]: https://github.com/gaepdit/air-web/releases/tag/v2026.7.30
 [2026.8.6]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.6
 [2026.8.10]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.10
+[2026.8.18]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.18
