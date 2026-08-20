@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026.8.20] - 2026-08-20
+
+- Further refined the Case File UI to reflect that discovery events are only strictly required for HPVs.
+- Facilities can now be opened using the EPA ICIS-Air Facility ID.
+
 ## [2026.8.18] - 2026-08-18
 
 - Made some UI changes to discourage closing a Case File if it still lacks required data (linked discovery event,
@@ -218,3 +223,4 @@
 [2026.8.6]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.6
 [2026.8.10]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.10
 [2026.8.18]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.18
+[2026.8.20]: https://github.com/gaepdit/air-web/releases/tag/v2026.8.20
